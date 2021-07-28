@@ -91,9 +91,7 @@ var section1 = new Vue({
     }
     $("[play]").one("click", play);
     $(".playlist a").one("click", play);
-    $(".playlist a.playing").on("mousedown", function() {
-        player.pauseVideo();
-    });
+   
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
     });
@@ -101,6 +99,7 @@ var section1 = new Vue({
         player.previousVideo();
     });
  
+    /*
     function toggleItem(elem) {
         for (var i = 0; i < elem.length; i++) {
           elem[i].addEventListener("click", function(e) {
@@ -127,5 +126,4 @@ var section1 = new Vue({
         };
       }
       toggleItem(document.querySelectorAll('.playlist a'));
-
-      
+      */
