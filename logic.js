@@ -1,3 +1,6 @@
+$(".playlist a.playing").on("mousedown", function() {
+    player.pauseVideo();
+});
 var section1 = new Vue({
     el: '#section1',
     data: {
@@ -90,10 +93,8 @@ var section1 = new Vue({
         
     }
     $("[play]").one("click", play);
+    $(".playlist a").one("click", play);
    
-    $(".playlist a.playing").on("mousedown", function() {
-        player.pauseVideo() 
-    });
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
     });
@@ -112,9 +113,12 @@ var section1 = new Vue({
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
                 current.textContent = 'play_arrow';
+                
               } else {
                 current.classList.add('playing');
                 current.textContent = 'pause';
+                
+                
               }
             }
             e.preventDefault();
@@ -122,3 +126,5 @@ var section1 = new Vue({
         };
       }
       toggleItem(document.querySelectorAll('.playlist a'));
+
+      
