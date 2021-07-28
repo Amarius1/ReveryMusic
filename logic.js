@@ -90,8 +90,10 @@ var section1 = new Vue({
         
     }
     $("[play]").one("click", play);
-    $(".playlist a").one("click", play);
-    
+   
+    $(".playlist a.playing").on("mousedown", function() {
+        player.pauseVideo() 
+    });
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
     });
