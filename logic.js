@@ -60,16 +60,6 @@ var section1 = new Vue({
       }
       function onPlayerReady(event) {
         event.target.playVideo();
-        function play() {
-            player.playVideo() 
-            $(this).one("click", pause);
-         
-        }
-        function pause() {
-            player.pauseVideo() 
-            $(this).one("click", play);
-    
-        }
       }
       function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
@@ -77,11 +67,11 @@ var section1 = new Vue({
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
-            $("[play]").one("click", pause);
+            $("[play]").click(function(){player.pauseVideo()});
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            $("[play]").one("click", play);
+            $("[play]").click(function(){player.playVideo()});
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
