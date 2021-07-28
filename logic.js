@@ -90,7 +90,7 @@ var section1 = new Vue({
         $(this).one("click", play);
         
     }
-    $(".playlist a.playing").on("mousedown", function() {
+    $(".playlist a.playing").on("mouseup", function() {
         player.pauseVideo();
     });
     $("[play]").one("click", play);
@@ -111,16 +111,14 @@ var section1 = new Vue({
               if (current != elem[i]) {
                 elem[i].classList.remove('playing');
                 elem[i].textContent = 'play_arrow';
-                player.pauseVideo();
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
                 current.textContent = 'play_arrow';
-                player.pauseVideo();
                 
               } else {
                 current.classList.add('playing');
                 current.textContent = 'pause';
-                player.playVideo();
+                
                 
                 
               }
