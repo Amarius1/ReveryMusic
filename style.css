@@ -362,6 +362,13 @@ input:-webkit-autofill:active  {
     margin-top: 1em;
     width: 100%;
     display: inline-flex;
+    flex-wrap: wrap;
+}
+.playlist_section > p 
+{
+    width: 100%;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1em;
 }
 .playlist_section [card]
 {
@@ -393,7 +400,7 @@ input:-webkit-autofill:active  {
 {
     font-size: 1.8em !important;
 }
-.now_playing.hidden 
+.hidden 
 {
-    display: none;
+    display: none !important;
 }
