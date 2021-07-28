@@ -14,7 +14,7 @@ var section1 = new Vue({
             color: "blue",
             description: "description",
             genre: "rock",
-            list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz",
+            list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
           },
        
       ],
@@ -24,7 +24,7 @@ var section1 = new Vue({
             color: "blue",
             description: "description",
             genre: "indie pop",
-            list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz",
+            list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
           },
        
       ],
@@ -81,7 +81,6 @@ function onYouTubePlayerAPIReady() {
 
                 var thumby = "https://i1.ytimg.com/vi/" + videoId + "/sddefault.jpg";
              
-                document.querySelector('[thumb]').setAttribute("src", thumby);
 
                 $.getJSON('https://noembed.com/embed',
                     {format: 'json', url: url}, function (data) {
