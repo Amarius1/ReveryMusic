@@ -1,4 +1,3 @@
-
 var section1 = new Vue({
     el: '#section1',
     data: {
@@ -90,12 +89,11 @@ var section1 = new Vue({
         $(this).one("click", play);
         
     }
-    $(".playlist a.playing").on("mouseup", function() {
-        player.pauseVideo();
-    });
     $("[play]").one("click", play);
     $(".playlist a").one("click", play);
-   
+    $(".playlist a.playing").on("mousedown", function() {
+        player.pauseVideo();
+    });
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
     });
@@ -107,19 +105,20 @@ var section1 = new Vue({
         for (var i = 0; i < elem.length; i++) {
           elem[i].addEventListener("click", function(e) {
             var current = this;
-            for (var i = 0; i < elem.length; i++) {
+            var attribute;
+            for (var i = 0; i < elem.length; i++){
               if (current != elem[i]) {
                 elem[i].classList.remove('playing');
                 elem[i].textContent = 'play_arrow';
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
                 current.textContent = 'play_arrow';
+
                 
               } else {
                 current.classList.add('playing');
                 current.textContent = 'pause';
-                
-                
+                current.setAttribute("onclick", 'player.pauseVideo()');
                 
               }
             }
