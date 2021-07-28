@@ -61,6 +61,9 @@ var section1 = new Vue({
       function onPlayerReady(event) {
         event.target.playVideo();
       }
+      const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+      }
       async function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
             document.querySelector('[play]').textContent = 'check_circle';
