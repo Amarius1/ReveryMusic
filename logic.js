@@ -64,13 +64,12 @@ var section1 = new Vue({
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
-            document.querySelectorAll('.playlist a.playing') = 'pause';
+            
          
            
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            document.querySelectorAll('.playlist a.playing') = 'play_arrow';
             
       
         } 
@@ -114,10 +113,13 @@ var section1 = new Vue({
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
                 current.textContent = 'play_arrow';
+
                 
               } else {
                 current.classList.add('playing');
-                current.textContent = 'pause'; 
+                current.textContent = 'pause';
+               
+                
               }
             }
             e.preventDefault();
