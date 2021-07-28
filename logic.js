@@ -61,22 +61,29 @@ var section1 = new Vue({
       function onPlayerReady(event) {
         event.target.playVideo();
       }
-      const sleep = (milliseconds) => {
-        return new Promise(resolve => setTimeout(resolve, milliseconds))
-      }
-      async function changePlayIcon(playerStatus) {
+      function play() {
+        player.playVideo() 
+        $(this).one("click", pause);
+     
+    }
+    function pause() {
+        player.pauseVideo() 
+        $(this).one("click", play);
+
+    }
+      function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
             document.querySelector('[play]').textContent = 'check_circle';
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
-            $("[play]").click(function(){player.pauseVideo()});
-            await sleep(500);
+            $("[play]").one("click", play);
+           
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            $("[play]").click(function(){player.playVideo()});
-            await sleep(500);
+            $("[play]").one("click", play);
+      
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
@@ -85,3 +92,5 @@ var section1 = new Vue({
       function onPlayerStateChange(event) {
         changePlayIcon(event.data);
       }
+    
+ 
