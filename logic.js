@@ -1,6 +1,4 @@
-$(".playlist a.playing").on("mousedown", function() {
-    player.pauseVideo();
-});
+
 var section1 = new Vue({
     el: '#section1',
     data: {
@@ -92,6 +90,9 @@ var section1 = new Vue({
         $(this).one("click", play);
         
     }
+    $(".playlist a.playing").on("mousedown", function() {
+        player.pauseVideo();
+    });
     $("[play]").one("click", play);
     $(".playlist a").one("click", play);
    
@@ -110,13 +111,16 @@ var section1 = new Vue({
               if (current != elem[i]) {
                 elem[i].classList.remove('playing');
                 elem[i].textContent = 'play_arrow';
+                player.pauseVideo();
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
                 current.textContent = 'play_arrow';
+                player.pauseVideo();
                 
               } else {
                 current.classList.add('playing');
                 current.textContent = 'pause';
+                player.playVideo();
                 
                 
               }
