@@ -70,8 +70,7 @@ var section1 = new Vue({
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            $(".now_playing").classList.remove('hidden');
-            $(".line-1").classList.add('hidden');
+           
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
@@ -83,6 +82,8 @@ var section1 = new Vue({
     function play() {
         player.playVideo() 
         $(this).one("click", pause); 
+        $(".now_playing").classList.remove('hidden');
+        $(".line-1").classList.add('hidden');
     }
     function pause() {
         player.pauseVideo() 
