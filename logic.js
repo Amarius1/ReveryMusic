@@ -91,9 +91,7 @@ var section1 = new Vue({
     }
     $("[play]").one("click", play);
     $(".playlist a").one("click", play);
-    $(".playlist a.playing").on("mousedown", function() {
-        player.pauseVideo();
-    });
+
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
     });
@@ -112,7 +110,8 @@ var section1 = new Vue({
                 elem[i].textContent = 'play_arrow';
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
-                current.textContent = 'play_arrow';                
+                current.textContent = 'play_arrow';
+                
               } else {
                 current.classList.add('playing');
                 current.textContent = 'pause'; 
