@@ -70,8 +70,8 @@ var section1 = new Vue({
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            document.querySelector('#now_playing').classList.remove('hidden');
-            document.querySelector('.line-1').classList.add('hidden');
+            $(".now_playing").classList.remove('hidden');
+            $(".line-1").classList.add('hidden');
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
