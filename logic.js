@@ -60,11 +60,35 @@ var section1 = new Vue({
       }
       function onPlayerReady(event) {
         event.target.playVideo();
+        function play() {
+            player.playVideo() 
+            $(this).one("click", pause);
+         
+        }
+        function pause() {
+            player.pauseVideo() 
+            $(this).one("click", play);
+    
+        }
+        $("[play]").one("click", play);
+      }
+      function changePlayIcon(playerStatus) {
+        if (playerStatus == -1) {
+            document.querySelector('[play]').textContent = 'check_circle';
+        else if (playerStatus == 1) {
+            document.querySelector('[play]').textContent = 'pause';
+        } else if (playerStatus == 2) {
+            document.querySelector('[play]').textContent = 'play_arrow';
+        } else if (playerStatus == 3) {
+            document.querySelector('[play]').textContent = 'hourglass_empty';
+        }
+        if (color) {
+          document.getElementById('existing-iframe-example').style.borderColor = color;
+        }
       }
       function onPlayerStateChange(event) {
-        
+        changePlayIcon(event.data);
       }
     
-
 
 
