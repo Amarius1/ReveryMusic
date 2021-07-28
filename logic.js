@@ -44,7 +44,7 @@ var section1 = new Vue({
 
 
 var info = document.getElementById('info');
-function onYouTubePlayerAPIReady() {
+window.onYouTubeIframeAPIReady = function()  {
   var player = new YT.Player('player', {
       videoId: 'b80Jw8MuZxo', // this is the id of the video at youtube (the stuff after "?v=")
       loop: true,
