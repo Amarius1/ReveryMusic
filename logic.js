@@ -7,14 +7,14 @@ var section1 = new Vue({
             color: "red",
             description: "description",
             genre: "rock",
-            link: "http://timesports.cc/ch15.php",
+            list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz",
           },
           {
             title: "Title2",
             color: "blue",
             description: "description",
             genre: "rock",
-            link: "http://timesports.cc/ch15.php",
+            list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz",
           },
        
       ],
@@ -24,17 +24,7 @@ var section1 = new Vue({
             color: "blue",
             description: "description",
             genre: "indie pop",
-            link: "http://timesports.cc/ch15.php",
-          },
-       
-      ],
-      playlist3: [
-        {
-            title: "Title3",
-            color: "green",
-            description: "description",
-            genre: "rap",
-            link: "http://timesports.cc/ch15.php",
+            list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz",
           },
        
       ],

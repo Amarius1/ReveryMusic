@@ -29,7 +29,13 @@
       <div class="playlist_section" id="section1">
         <span card v-for="item in playlist1" :key="item" v-bind:class="item.color">
           <p>{{ item.title }}</p>
-          <a v-bind:href="item.link" btn icon>play_arrow</a>
+
+
+
+          <a v-bind:onclick="'function({player.loadPlaylist({list:'+item.list+'})'" btn icon>play_arrow</a>
+
+
+
         </span>
       </div>
     </aside>
