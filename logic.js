@@ -7,7 +7,7 @@ var section1 = new Vue({
             color: "red",
             description: "description",
             genre: "rock",
-            list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz",
+            list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
           },
           {
             title: "Title2",
@@ -135,7 +135,6 @@ function onYouTubePlayerAPIReady() {
         player.loadPlaylist({list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz", index: 0, startSeconds: 0,suggestedQuality: "small"});
     });
 };
-
 
 
 
