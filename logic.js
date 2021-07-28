@@ -130,11 +130,11 @@ function onYouTubePlayerAPIReady() {
     $("[blues1]").on("mousedown", function() {
         player.loadVideoById({'videoId': '1eNSWZ4x2ZU'});
     });
-    $("[tame]").on("mousedown", function() {
-        player.loadPlaylist({list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq", index: 0, startSeconds: 0,suggestedQuality: "small"});
-    });
+   
 };
 
 
-
+$("[tame]").on("mousedown", function() {
+    player.loadPlaylist({list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq", index: 0, startSeconds: 0,suggestedQuality: "small"});
+});
 
