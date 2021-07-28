@@ -3,11 +3,11 @@ var section1 = new Vue({
     data: {
       playlist1: [
         {
-            title: "Title1",
+            title: "Metal Essentials",
             color: "red",
             description: "description",
-            genre: "rock",
-            list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
+            genre: "metal",
+            list: "PLRJWQz0eR2QVQigxE6xzfdoLmJzR7ZVrS",
           },
           {
             title: "Title2",
