@@ -75,20 +75,17 @@ var section1 = new Vue({
       function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
             document.querySelector('[play]').textContent = 'check_circle';
+        }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
-        } else if (playerStatus == 2) {
+        } 
+        else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-        } else if (playerStatus == 3) {
+        } 
+        else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
-        }
-        if (color) {
-          document.getElementById('existing-iframe-example').style.borderColor = color;
         }
       }
       function onPlayerStateChange(event) {
         changePlayIcon(event.data);
       }
-    
-
-
