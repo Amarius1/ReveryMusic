@@ -61,7 +61,9 @@ var section1 = new Vue({
             player.loadPlaylist({list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq", index: 0, startSeconds: 0,suggestedQuality: "small"});
         });
       }
-   
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
     
     
 
