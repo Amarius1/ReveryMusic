@@ -61,16 +61,6 @@ var section1 = new Vue({
       function onPlayerReady(event) {
         event.target.playVideo();
       }
-      function play() {
-        player.playVideo() 
-        $(this).one("click", pause);
-     
-    }
-    function pause() {
-        player.pauseVideo() 
-        $(this).one("click", play);
-
-    }
       function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
             document.querySelector('[play]').textContent = 'check_circle';
@@ -92,5 +82,14 @@ var section1 = new Vue({
       function onPlayerStateChange(event) {
         changePlayIcon(event.data);
       }
-    
- 
+      function play() {
+        player.playVideo() 
+        $(this).one("click", pause);
+     
+    }
+    function pause() {
+        player.pauseVideo() 
+        $(this).one("click", play);
+
+    }
+    $("[play]").one("click", play);
