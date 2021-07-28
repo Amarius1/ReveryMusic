@@ -61,17 +61,19 @@ var section1 = new Vue({
       function onPlayerReady(event) {
         event.target.playVideo();
       }
-      function changePlayIcon(playerStatus) {
+      async function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
             document.querySelector('[play]').textContent = 'check_circle';
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
             $("[play]").click(function(){player.pauseVideo()});
+            await sleep(200);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
             $("[play]").click(function(){player.playVideo()});
+            await sleep(200);
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
