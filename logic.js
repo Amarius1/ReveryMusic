@@ -64,12 +64,13 @@ var section1 = new Vue({
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
-            
+            document.querySelectorAll('.playlist a.playing') = 'pause';
          
            
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
+            document.querySelectorAll('.playlist a.playing') = 'play_arrow';
             
       
         } 
@@ -91,7 +92,9 @@ var section1 = new Vue({
     }
     $("[play]").one("click", play);
     $(".playlist a").one("click", play);
-
+    $(".playlist a.playing").on("mousedown", function() {
+        player.pauseVideo();
+    });
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
     });
