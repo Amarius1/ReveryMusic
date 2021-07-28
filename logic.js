@@ -54,9 +54,6 @@ var section1 = new Vue({
             'onStateChange': onPlayerStateChange
           }
         });
-        $("[tame]").on("mousedown", function() {
-            player.loadPlaylist({list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq", index: 0, startSeconds: 0,suggestedQuality: "small"});
-        });
       }
       function onPlayerReady(event) {
         event.target.playVideo();
@@ -97,3 +94,29 @@ var section1 = new Vue({
     $("[skip-prev]").on("mousedown", function() {
         player.previousVideo();
     });
+ 
+    function toggleItem(elem) {
+        for (var i = 0; i < elem.length; i++) {
+          elem[i].addEventListener("click", function(e) {
+            var current = this;
+            for (var i = 0; i < elem.length; i++) {
+              if (current != elem[i]) {
+                elem[i].classList.remove('playing');
+                elem[i].textContent = 'play_arrow';
+                elem[i].one("click", play);
+              } else if (current.classList.contains('playing') === true) {
+                current.classList.remove('playing');
+                current.textContent = 'play_arrow';
+                current.one("click", play);
+              } else {
+                current.classList.add('playing');
+                current.textContent = 'pause';
+                current.one("click", play);
+
+              }
+            }
+            e.preventDefault();
+          });
+        };
+      }
+      toggleItem(document.querySelectorAll('.playlist a'));

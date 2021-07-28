@@ -26,7 +26,7 @@
       <H4 class="library_header">Library</H4>
       <input type="search" name="search" class="wide search" placeholder="Search...">
       <div class="playlist_section" id="section1">
-        <span card v-for="item in playlist1" :key="item" v-bind:class="item.color">
+        <span card v-for="item in playlist1" :key="item" v-bind:class="item.color" class="playlist">
           <p>{{ item.title }}</p>
           <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\', index: 0, startSeconds: 0, suggestedQuality: \'small\'})'" btn icon>play_arrow</a>
         </span>
