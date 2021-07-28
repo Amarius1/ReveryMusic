@@ -68,12 +68,12 @@ var section1 = new Vue({
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
             $("[play]").click(function(){player.pauseVideo()});
-            await sleep(200);
+            await sleep(500);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
             $("[play]").click(function(){player.playVideo()});
-            await sleep(200);
+            await sleep(500);
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
