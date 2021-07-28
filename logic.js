@@ -70,7 +70,6 @@ var section1 = new Vue({
             $(this).one("click", play);
     
         }
-        $("[play]").one("click", play);
       }
       function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
@@ -78,9 +77,11 @@ var section1 = new Vue({
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
+            $("[play]").one("click", pause);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
+            $("[play]").one("click", play);
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
