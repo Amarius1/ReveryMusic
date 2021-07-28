@@ -12,7 +12,7 @@
     <span>
     <H1 class="line-1">REVERY</H1>
     </span>
-    <span id="now_playing" class="now_playing">
+    <span id="now_playing" class="now_playing hidden">
       <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
       <a btn icon skip-prev>skip_previous</a>
       <a btn icon play>play_arrow</a>
@@ -26,6 +26,7 @@
       <H4 class="library_header">Library</H4>
       <input type="search" name="search" class="wide search" placeholder="Search...">
       <div class="playlist_section" id="section1">
+        <p>Recommended playlists</p>
         <span card v-for="item in playlist1" :key="item" v-bind:class="item.color" class="playlist">
           <p>{{ item.title }}</p>
           <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
