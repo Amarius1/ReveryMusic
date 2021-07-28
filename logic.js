@@ -112,14 +112,10 @@ var section1 = new Vue({
                 elem[i].textContent = 'play_arrow';
               } else if (current.classList.contains('playing') === true) {
                 current.classList.remove('playing');
-                current.textContent = 'play_arrow';
-
-                
+                current.textContent = 'play_arrow';                
               } else {
                 current.classList.add('playing');
-                current.textContent = 'pause';
-                current.setAttribute("onclick", 'player.pauseVideo()');
-                
+                current.textContent = 'pause'; 
               }
             }
             e.preventDefault();
