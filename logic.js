@@ -67,12 +67,12 @@ var section1 = new Vue({
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
-            $("[play]").one("click", play);
+         
            
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            $("[play]").one("click", play);
+         
       
         } 
         else if (playerStatus == 3) {
