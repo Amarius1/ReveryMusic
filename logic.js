@@ -78,18 +78,22 @@ var section1 = new Vue({
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
         }
-      }
-      function onPlayerStateChange(event) {
+    }
+    function onPlayerStateChange(event) {
         changePlayIcon(event.data);
-      }
-      function play() {
+    }
+    function play() {
         player.playVideo() 
-        $(this).one("click", pause);
-     
+        $(this).one("click", pause); 
     }
     function pause() {
         player.pauseVideo() 
         $(this).one("click", play);
-
     }
     $("[play]").one("click", play);
+    $("[skip-next]").on("mousedown", function() {
+        player.nextVideo();
+    });
+    $("[skip-prev]").on("mousedown", function() {
+        player.previousVideo();
+    });
