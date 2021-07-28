@@ -64,7 +64,9 @@ var section1 = new Vue({
       function onPlayerReady(event) {
         event.target.playVideo();
       }
-    
+      function onPlayerStateChange(event) {
+        
+      }
     
 
 
