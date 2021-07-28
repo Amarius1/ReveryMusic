@@ -57,10 +57,11 @@ var section1 = new Vue({
             'onStateChange': onPlayerStateChange
           }
         });
+        $("[tame]").on("mousedown", function() {
+            player.loadPlaylist({list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq", index: 0, startSeconds: 0,suggestedQuality: "small"});
+        });
       }
-    $("[tame]").on("mousedown", function() {
-        player.loadPlaylist({list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq", index: 0, startSeconds: 0,suggestedQuality: "small"});
-    });
+   
     
     
 
