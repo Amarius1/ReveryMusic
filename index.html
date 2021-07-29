@@ -28,12 +28,12 @@
       <input v-model="searchQuery" type="search" name="search" class="wide search" placeholder="Search">
       <section class="search_results">
         <p class="slide-in-top">Search results</p>
-        <div class="playlist_section"v-for="resultArray in resultQuery">
+        <span v-for="resultArray in resultQuery">
               <span card v-for="item in resultArray" :key="item" v-bind:class="item.color" class="playlist search_result">
                 <p>{{ item.title }}</p>
                 <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
               </span>
-        </div>
+        </span>
       </section>
       <div class="playlist_section slide-in-top">
         
