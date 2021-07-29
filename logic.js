@@ -102,6 +102,8 @@ $('a[action="#closedialog"]').click(function() {
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
             document.querySelector('[play_mini]').textContent = 'pause';
+            $( ".line-1" ).addClass( "hidden" );
+            $( ".now_playing" ).removeClass( "hidden" );
             
          
            
@@ -109,6 +111,8 @@ $('a[action="#closedialog"]').click(function() {
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
             document.querySelector('[play_mini]').textContent = 'play_arrow';
+            $( ".line-1" ).removeClass( "hidden" );
+            $( ".now_playing" ).addClass( "hidden" );
            
         } 
         else if (playerStatus == 3) {
@@ -120,7 +124,7 @@ $('a[action="#closedialog"]').click(function() {
     }
     function play() {
         player.playVideo() 
-        $(this).on("mousedown", pause); 
+        $(this).one("mousedown", pause); 
         
     }
     function pause() {
