@@ -111,8 +111,6 @@ $('a[action="#closedialog"]').click(function() {
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
             document.querySelector('[play_mini]').textContent = 'play_arrow';
-            $( ".line-1" ).removeClass( "hidden" );
-            $( ".now_playing" ).addClass( "hidden" );
            
         } 
         else if (playerStatus == 3) {
