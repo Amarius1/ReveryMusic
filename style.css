@@ -268,9 +268,7 @@ a[btn][icon].outlined.filled
   position: relative;
   color: white;
   font-size: 6em !important;
-  margin-top: 0px !important;
-  margin-left: 0 !important;
-  margin-right: auto !important;
+  margin: 0 auto;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.02em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -329,16 +327,6 @@ input.search
   padding-left: 1em;
   margin-top: 0.2em;
   color: white;
-}
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  height: 1em;
-  width: 1em;
-  border-radius: 50em;
-  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
-  background-size: contain;
-  opacity: 0;
-  pointer-events: none;
 }
 .library_header 
 {
@@ -417,6 +405,11 @@ input:-webkit-autofill:active  {
     background-color: rgba(255,255,255,0.6);
     border-radius: 5px;
     padding: 1.4em;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: inline-flex;
+    flex: 0.5;
 }
 .now_playing [btn][icon]
 {
