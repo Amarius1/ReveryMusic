@@ -115,7 +115,7 @@ $('a[action="#closedialog"]').click(function() {
                 });
 
                    
-                document.querySelector('.song_title');.forEach((item) => {
+                document.querySelector('.song_title').forEach((item) => {
                   
                    const searchRegExp = /video/gi;
                    const replaceWith = '';
