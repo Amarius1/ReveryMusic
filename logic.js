@@ -122,7 +122,7 @@ $('a[action="#closedialog"]').click(function() {
     }
     function play() {
         player.playVideo() 
-        $(this).one("mousedown", pause); 
+        $(this).one("click", pause); 
         
     }
     function pause() {
