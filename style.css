@@ -377,6 +377,7 @@ input:-webkit-autofill:active  {
     width: 100%;
     color: rgba(255,255,255,0.5);
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 .playlist_section [card]
 {
