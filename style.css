@@ -409,6 +409,7 @@ input:-webkit-autofill:active  {
     align-content: center;
     display: inline-flex;
     flex: 0.5;
+    position: relative;
 }
 .now_playing [btn][icon]
 {
@@ -451,5 +452,11 @@ input:-webkit-autofill:active  {
 {
     position: absolute;
     top: 0px;
+    left: 0px;
+}
+.main_seekbar 
+{
+    position: absolute;
+    bottom: 0px;
     left: 0px;
 }

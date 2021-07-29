@@ -149,3 +149,12 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = player.getCurrentTime();
+    
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      output.innerHTML = player.seekTo(this.value);
+    }
+    
