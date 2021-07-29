@@ -416,6 +416,8 @@ input:-webkit-autofill:active  {
     border-radius: 5px;
     padding: 1.4em;
     width: 100%;
+    display: inline-flex;
+    flex: 1;
 }
 .now_playing [btn][icon]
 {
