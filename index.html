@@ -26,14 +26,14 @@
       <a btn icon play>play_arrow</a>
       <H4 class="library_header">Library</H4>
       <input v-model="searchQuery" type="search" name="search" class="wide search" placeholder="Search">
-      <div class="playlist_section search_results">
+      <div class="playlist_section search_results"v-for="resultArray in resultQuery">
           <p class="slide-in-top">Search results</p>
-          <span v-for="resultArray in resultQuery">
+        
             <span card v-for="item in resultArray" :key="item" v-bind:class="item.color" class="playlist search_result">
               <p>{{ item.title }}</p>
               <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
             </span>
-          </span>
+        
       </div>
       <div class="playlist_section slide-in-top">
         
