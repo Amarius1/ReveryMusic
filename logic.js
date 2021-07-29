@@ -114,8 +114,8 @@ $('a[action="#closedialog"]').click(function() {
                     document.querySelector('.song_title').textContent = data.title;
                 });
 
-                   
-                document.querySelector('.song_title').forEach((item) => {
+                var elem =  document.querySelectorAll('.song_title');    
+                elem.forEach((item) => {
                   
                    const searchRegExp = /video/gi;
                    const replaceWith = '';
