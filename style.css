@@ -413,6 +413,14 @@ input:-webkit-autofill:active  {
 {
     width: 100%;
 }
+.search_result 
+{
+    display: block !important;
+}
+.search_results > span 
+{
+    display: flex !important;
+}
 .hidden 
 {
     display: none !important;
