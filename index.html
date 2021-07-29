@@ -29,7 +29,7 @@
       <div class="playlist_section search_results">
           <p class="slide-in-top">Search results</p>
           <span v-for="resultArray in resultQuery">
-            <span card v-for="item in resultArray" :key="item" v-bind:class="item.color" class="playlist search_result">
+            <span card v-for="item in resultArray" :key="item" v-bind:class="item.color" class="playlist search_result slide-in-top">
               <p>{{ item.title }}</p>
               <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
             </span>

@@ -100,13 +100,13 @@ $('a[action="#closedialog"]').click(function() {
             document.querySelector('[play]').textContent = 'check_circle';
         }
         else if (playerStatus == 1) {
-            document.querySelector('[play]').textContent = 'pause';
+            document.querySelectorAll('[play]').textContent = 'pause';
             
          
            
         } 
         else if (playerStatus == 2) {
-            document.querySelector('[play]').textContent = 'play_arrow';
+            document.querySelectorAll('[play]').textContent = 'play_arrow';
            
         } 
         else if (playerStatus == 3) {
