@@ -364,7 +364,7 @@ input:-webkit-autofill:active  {
     background-color: rgba(255,255,255,0.07);
 
 }
-.music_library [play]
+.music_library [play_mini]
 {
     font-size: 22em !important;
     color: white !important;

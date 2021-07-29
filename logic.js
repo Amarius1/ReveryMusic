@@ -120,7 +120,7 @@ $('a[action="#closedialog"]').click(function() {
     }
     function play() {
         player.playVideo() 
-        $(this).one("click", pause); 
+        $(this).on("mousedown", pause); 
         
     }
     function pause() {
