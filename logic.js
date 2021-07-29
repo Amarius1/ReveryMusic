@@ -111,7 +111,7 @@ $('a[action="#closedialog"]').click(function() {
 
                 $.getJSON('https://noembed.com/embed',
                     {format: 'json', url: url}, function (data) {
-                    document.querySelector('.song_title').textContent = data.title;
+                    document.querySelector('.song_title').textContent = data.title.replace('video', '');;
                 });
 
            
