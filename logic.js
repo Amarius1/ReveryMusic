@@ -1,6 +1,7 @@
-var section1 = new Vue({
-    el: '#section1',
+var app = new Vue({
+    el: '#app',
     data: {
+      searchQuery: null,
       playlist1: [
         {
             title: "Metal Essentials",
@@ -23,15 +24,36 @@ var section1 = new Vue({
             title: "Title2",
             color: "blue",
             description: "description",
-            genre: "indie pop",
+            genre: "indie",
             list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
           },
        
       ],
+    },
+    computed: {
+      resultQuery(){
+        if(this.searchQuery){
+        return this.playlist1.filter((item)=>{
+          return this.searchQuery.toLowerCase().split(' ').every(v => item.title.toLowerCase().includes(v))
+        })
+        
+        }else{
+          return this.resources;
+        }
+      }
     }
   });
 
 
+$('a[action="#dialog"]').click(function() {
+  $('#dialog').addClass('open')
+  $('body').addClass('remove-scrollbar')
+})
+$('a[action="#closedialog"]').click(function() {
+  $('#dialog').removeClass('open')
+  $('body').removeClass('remove-scrollbar')
+
+})
 
 
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -82,8 +104,7 @@ var section1 = new Vue({
     function play() {
         player.playVideo() 
         $(this).one("click", pause); 
-        $(".now_playing").classList.remove('hidden');
-        $(".line-1").classList.add('hidden');
+        
     }
     function pause() {
         player.pauseVideo() 
@@ -100,31 +121,3 @@ var section1 = new Vue({
         player.previousVideo();
     });
  
-    /*
-    function toggleItem(elem) {
-        for (var i = 0; i < elem.length; i++) {
-          elem[i].addEventListener("click", function(e) {
-            var current = this;
-            var attribute;
-            for (var i = 0; i < elem.length; i++){
-              if (current != elem[i]) {
-                elem[i].classList.remove('playing');
-                elem[i].textContent = 'play_arrow';
-              } else if (current.classList.contains('playing') === true) {
-                current.classList.remove('playing');
-                current.textContent = 'play_arrow';
-
-                
-              } else {
-                current.classList.add('playing');
-                current.textContent = 'pause';
-               
-                
-              }
-            }
-            e.preventDefault();
-          });
-        };
-      }
-      toggleItem(document.querySelectorAll('.playlist a'));
-      */

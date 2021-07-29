@@ -12,7 +12,7 @@
     <span>
     <H1 class="line-1">REVERY</H1>
     </span>
-    <span id="now_playing" class="now_playing hidden">
+    <span id="now_playing" class="now_playing">
       <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
       <a btn icon skip-prev>skip_previous</a>
       <a btn icon play>play_arrow</a>
@@ -21,16 +21,26 @@
   <a btn class="library" action="#dialog">Music</a>
   </section>
   <span dialog id="dialog" class="full-screen music_library">
-    <aside>
+    <aside  id="app">
       <a btn icon action="#closedialog">arrow_back</a>
+      <a btn icon play>play_arrow</a>
       <H4 class="library_header">Library</H4>
-      <input type="search" name="search" class="wide search" placeholder="Search...">
-      <div class="playlist_section" id="section1">
-        <p>Recommended playlists</p>
+      <input v-model="searchQuery" type="search" name="search" class="wide search" placeholder="Search">
+      <div class="playlist_section search_results">
+          <p class="slide-in-top">Search results</p>
+          <span card v-for="item in resultQuery" :key="item" v-bind:class="item.color" class="playlist search_result">
+            <p>{{ item.title }}</p>
+            <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
+          </span>
+      </div>
+      <div class="playlist_section slide-in-top">
+        
+        <p>Curated playlists</p>
         <span card v-for="item in playlist1" :key="item" v-bind:class="item.color" class="playlist">
           <p>{{ item.title }}</p>
           <a v-bind:onclick="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
         </span>
+       
       </div>
     </aside>
   </span>
@@ -40,17 +50,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="framework.js"></script>
 <script type="text/javascript" src="logic.js"></script>
-<script>
-   $('a[action="#dialog"]').click(function() {
-                $('#dialog').addClass('open')
-                $('body').addClass('remove-scrollbar')
-            })
-            $('a[action="#closedialog"]').click(function() {
-                $('#dialog').removeClass('open')
-                $('body').removeClass('remove-scrollbar')
 
-            })
-</script>
 
 </body>
 </html>
