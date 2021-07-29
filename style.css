@@ -268,7 +268,7 @@ a[btn][icon].outlined.filled
   position: relative;
   color: white;
   font-size: 6em !important;
-  margin: none !important;
+  margin: 0 auto;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.02em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -418,9 +418,6 @@ input:-webkit-autofill:active  {
     width: 100%;
     display: inline-flex;
     flex: 1;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
 }
 .now_playing [btn][icon]
 {
