@@ -367,7 +367,6 @@ input:-webkit-autofill:active  {
 }
 .playlist_section 
 {
-    margin-top: 1em;
     width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
