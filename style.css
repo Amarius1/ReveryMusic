@@ -329,15 +329,15 @@ input.search
   color: white;
 }
 input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    height: 1em;
-    width: 1em;
-    border-radius: 50em;
-    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
-    background-size: contain;
-    opacity: 0;
-    pointer-events: none;
-  }
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
 .library_header 
 {
   display: inline-flex !important;
@@ -364,7 +364,7 @@ input:-webkit-autofill:active  {
     background-color: rgba(255,255,255,0.07);
 
 }
-.music_library [play_mini]
+.music_library [play]
 {
     font-size: 22em !important;
     color: white !important;
@@ -415,9 +415,6 @@ input:-webkit-autofill:active  {
     background-color: rgba(255,255,255,0.6);
     border-radius: 5px;
     padding: 1.4em;
-    width: 100%;
-    display: inline-flex;
-    flex: 1;
 }
 .now_playing [btn][icon]
 {
