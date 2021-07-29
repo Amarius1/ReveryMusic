@@ -1,9 +1,32 @@
+const searchByTitleOrGenre = (item, search) =>
+  search
+  .toLowerCase()
+  .split(' ')
+  .every(v => item.title.toLowerCase().includes(v) || item.genre.toLowerCase().includes(v));
+
+const searchPlaylists = (playlists, search) => {
+  const searchResults = [];
+
+  if (search) {
+    for (const [playlistName, playlistItems] of Object.entries(playlists)) {
+      // Search for the item that matches the search by the single playlist title
+      const matchingPlaylistItems = playlistItems.filter(item => searchByTitleOrGenre(item, search));
+      // Set the first matching playlist as the search result
+      if (matchingPlaylistItems.length !== 0) {
+        searchResults.push(matchingPlaylistItems);
+      }
+    }
+  }
+  return searchResults;
+};
+
 var app = new Vue({
     el: '#app',
     data: {
       searchQuery: null,
-      playlist1: [
-        {
+      playlists: {
+        curated: [
+          {
             title: "Metal Essentials",
             color: "red",
             description: "description",
@@ -17,31 +40,23 @@ var app = new Vue({
             genre: "rock",
             list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
           },
-       
-      ],
-      playlist2: [
-        {
-            title: "Title2",
+        ],
+        recommended: [
+          {
+            title: "Title 3",
             color: "blue",
             description: "description",
             genre: "indie",
             list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
           },
-       
-      ],
+        ],
+      },
     },
     computed: {
-      resultQuery(){
-        if(this.searchQuery){
-        return this.playlist1.filter((item)=>{
-          return this.searchQuery.toLowerCase().split(' ').every(v => item.title.toLowerCase().includes(v))
-        })
-        
-        }else{
-          return this.resources;
+      resultQuery() {
+         return searchPlaylists(this.playlists, this.searchQuery);
         }
-      }
-    }
+      },
   });
 
 
