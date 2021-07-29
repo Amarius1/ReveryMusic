@@ -378,7 +378,7 @@ input:-webkit-autofill:active  {
     color: rgba(255,255,255,0.5);
     margin-bottom: 1em;
 }
-.playlist_section [card], .search_result
+.playlist_section [card]
 {
     background-color: rgba(255,255,255,0.07);
     color: white;
@@ -397,6 +397,10 @@ input:-webkit-autofill:active  {
 .playlist_section [card].red 
 {
     background-color: #c62828;
+}
+.search_result 
+{
+    display: block !important;
 }
 .now_playing 
 {
