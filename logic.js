@@ -105,7 +105,15 @@ $('a[action="#closedialog"]').click(function() {
             $( ".line-1" ).addClass( "hidden" );
             $( ".now_playing" ).removeClass( "hidden" );
             
-         
+            var url = player.getVideoUrl();
+                var match = url.match(/[?&]v=([^&]+)/);
+                videoId = match[1];
+
+                $.getJSON('https://noembed.com/embed',
+                    {format: 'json', url: url}, function (data) {
+                    document.querySelector('.song_title').textContent = data.title;
+                });
+
            
         } 
         else if (playerStatus == 2) {
