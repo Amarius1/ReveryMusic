@@ -111,18 +111,10 @@ $('a[action="#closedialog"]').click(function() {
 
                 $.getJSON('https://noembed.com/embed',
                     {format: 'json', url: url}, function (data) {
-                    document.querySelector('.song_title').textContent = data.title;
+                    document.querySelector('.song_title').textContent = data.title.replace(/OFFICIAL|MUSIC|VIDEO/g,'');
                 });
 
-                var elem =  document.querySelectorAll('.song_title');    
-                elem.forEach((item) => {
-                  
-                   const searchRegExp = /video/gi;
-                   const replaceWith = '';
-                 
-                   const result = item.innerHTML.replace(searchRegExp, replaceWith);
-                   item.innerHTML = result
-                });
+           
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
