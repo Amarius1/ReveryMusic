@@ -100,13 +100,15 @@ $('a[action="#closedialog"]').click(function() {
             document.querySelector('[play]').textContent = 'check_circle';
         }
         else if (playerStatus == 1) {
-            document.querySelectorAll('[play]').textContent = 'pause';
+            document.querySelector('[play]').textContent = 'pause';
+            document.querySelector('[play_mini]').textContent = 'pause';
             
          
            
         } 
         else if (playerStatus == 2) {
-            document.querySelectorAll('[play]').textContent = 'play_arrow';
+            document.querySelector('[play]').textContent = 'play_arrow';
+            document.querySelector('[play_mini]').textContent = 'play_arrow';
            
         } 
         else if (playerStatus == 3) {
@@ -127,7 +129,8 @@ $('a[action="#closedialog"]').click(function() {
         
     }
     $("[play]").one("click", play);
-    $(".playlist a").one("click", play);
+
+     $("[play_mini]").one("click", play);
    
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
