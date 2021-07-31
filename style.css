@@ -503,7 +503,8 @@ input[type=range].seekbar {
     color: transparent;
   }
   input[type=range].seekbar::-webkit-slider-thumb {
-    /*-webkit-appearance: none !important;
+    -webkit-appearance: none !important;
+    /*
     background: #343452;
     height: 5px;
     width: 10px;
