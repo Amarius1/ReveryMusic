@@ -130,7 +130,7 @@ $('a[action="#closedialog"]').click(function() {
                 var seconds = s - minutes * 60;
                 output.innerHTML = minutes + ':' + seconds;
                
-                sleep(100).then(() => {
+                sleep(500).then(() => {
                   rangeslider.oninput = function() {
                     player.seekTo(this.value);
                   };
