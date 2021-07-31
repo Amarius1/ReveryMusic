@@ -507,12 +507,11 @@ input[type=range].seekbar {
     background: #343452;
     height: 5px;
     width: 10px;
-    border-radius: 50%;
-    box-shadow: -100vw 0 0 100vw #e7e4f2;*/
+    border-radius: 50%;*/
+    box-shadow: -100vw 0 0 100vw #e7e4f2;
     border: 2px solid red;
     border-radius: 50%;
     height: 10px;
-    position: absolute;
     width: 10px;
   }
   input[type=range].seekbar:focus {
