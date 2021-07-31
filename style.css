@@ -310,7 +310,7 @@ a[btn][icon].outlined.filled
   height: 80% !important;
   border-radius: 5px;
   padding: 1em;
-  background-color: rgb(22, 22, 22) !important;
+  background-color: rgb(20 20 25) !important;
 }
 input.search 
 {
@@ -410,6 +410,7 @@ input:-webkit-autofill:active  {
     display: inline-flex;
     flex: 0.5;
     position: relative;
+    flex-wrap: wrap;
 }
 .now_playing [btn][icon]
 {
@@ -457,6 +458,8 @@ input:-webkit-autofill:active  {
 .main_seekbar 
 {
     position: relative;
+    display: block;
+    width: 100%;
 }
 
 
@@ -468,7 +471,7 @@ input[type=range].seekbar {
     -webkit-appearance: none !important;
     margin: 0px;
     padding: 0px;
-    background: #f2eae4;
+    background: #e7e4f2;
     height: 5px;
     width: 100%;
     outline: none;
@@ -488,24 +491,24 @@ input[type=range].seekbar {
   }
   input[type=range].seekbar::-webkit-slider-thumb {
     -webkit-appearance: none !important;
-    background: #ff3677;
+    background: #343452;
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    box-shadow: -100vw 0 0 100vw #f7d9b9;
+    box-shadow: -100vw 0 0 100vw #e7e4f2;
   }
   input[type=range].seekbar:focus {
     outline: none;
   }
   input[type=range].seekbar::-moz-range-thumb {
-    background: #ff3677;
+    background: #343452;
     height: 8px;
     width: 8px;
     border-radius: 100%;
   }
   input[type=range].seekbar::-ms-thumb {
     -webkit-appearance: none !important;
-    background: #ff3677;
+    background: #343452;
     height: 8px;
     width: 8px;
     border-radius: 100%;
