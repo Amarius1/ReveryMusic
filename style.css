@@ -462,12 +462,7 @@ input:-webkit-autofill:active  {
       opacity: 1;
     }
   }
-.song_title 
-{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
+
 .main_seekbar 
 {
     position: relative;
