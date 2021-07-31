@@ -113,7 +113,9 @@ $('a[action="#closedialog"]').click(function() {
                     {format: 'json', url: url}, function (data) {
                     document.querySelector('.song_title').textContent = data.title.replace(/\(OFFICIAL|MUSIC|VIDEO\)/g,'');
                 });
-
+                function sleep(ms) {
+                  return new Promise(resolve => setTimeout(resolve, ms));
+                };
                 function seekBar() {
                 var rangeslider = document.getElementById("sliderRange");
                 var output = document.getElementById("demo");
@@ -122,14 +124,17 @@ $('a[action="#closedialog"]').click(function() {
                 //output.innerHTML = player.getCurrentTime();
                 rangeslider.value = player.getCurrentTime();
 
+               
                 var s = Math.trunc(player.getCurrentTime());
                 var minutes = Math.floor(s / 60);
                 var seconds = s - minutes * 60;
                 output.innerHTML = minutes + ':' + seconds;
                
-                rangeslider.oninput = function() {
-                  player.seekTo(this.value);
-                }
+                sleep(100).then(() => {
+                  rangeslider.oninput = function() {
+                    player.seekTo(this.value);
+                  };
+                };
                 
                 };
                 setInterval(seekBar, 1000);
