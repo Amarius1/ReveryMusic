@@ -120,7 +120,7 @@ $('a[action="#closedialog"]').click(function() {
             
                 rangeslider.max = player.getDuration();
                 rangeslider.oninput = function() {
-                  output.innerHTML = this.value;
+                  output.innerHTML = player.getCurrentTime();
                 }
            
         } 
