@@ -119,9 +119,13 @@ $('a[action="#closedialog"]').click(function() {
                 var output = document.getElementById("demo");
                 rangeslider.max = player.getDuration();
                
-                output.innerHTML = player.getCurrentTime();
+                //output.innerHTML = player.getCurrentTime();
                 rangeslider.value = player.getCurrentTime();
 
+                var s = Math.trunc(player.getDuration() - player.getCurrentTime());
+                var minutes = Math.floor(s / 60);
+                var seconds = s - minutes * 60;
+                output.innerHTML = minutes + ':' + seconds;
                
                 rangeslider.oninput = function() {
                   player.seekTo(this.value);
