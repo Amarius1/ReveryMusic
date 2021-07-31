@@ -507,8 +507,8 @@ input[type=range].seekbar {
     background: #ffffffd8;
     height: 5px;
     width: 10px;
-    border-radius: 50%;
-    box-shadow: -100vw 0 0 100vw #e7e4f2;
+    border-radius: 0px;
+    box-shadow: -100vw 0 0 100vw #e7e4f2fa;
 
   }
   input[type=range].seekbar:focus {
@@ -526,4 +526,12 @@ input[type=range].seekbar {
     height: 8px;
     width: 8px;
     border-radius: 100%;
+  }
+  .now_playing_container
+  {
+      width: 10%;
+      background-color: white;
+      border-radius: 5px;
+      display: flex;
+  align-items: stretch;
   }
