@@ -414,6 +414,8 @@ input:-webkit-autofill:active  {
     left: 0px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.20) !important;
     color: white;
+    width: 100%;
+    border-radius: 0px;
     
 }
 .now_playing [btn][icon]
@@ -424,8 +426,8 @@ input:-webkit-autofill:active  {
 .now_playing [play]
 {
     background-color: white !important;
-    color:rgb(22, 22, 22);
-    padding: 10px;
+    color:rgb(22, 22, 22) !important;
+    padding: 10px !important;
 }
 .search_results 
 {
@@ -501,12 +503,17 @@ input[type=range].seekbar {
     color: transparent;
   }
   input[type=range].seekbar::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
+    /*-webkit-appearance: none !important;
     background: #343452;
     height: 5px;
-    width: 5px;
+    width: 10px;
     border-radius: 50%;
-    box-shadow: -100vw 0 0 100vw #e7e4f2;
+    box-shadow: -100vw 0 0 100vw #e7e4f2;*/
+    border: 2px solid red;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
   }
   input[type=range].seekbar:focus {
     outline: none;
