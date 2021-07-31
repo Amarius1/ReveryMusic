@@ -491,6 +491,7 @@ input[type=range].seekbar {
     cursor: pointer;
     overflow: hidden;
     border-radius: 5px;
+    z-index: 1;
   }
 
  input[type=range].seekbar::-ms-track {
@@ -508,12 +509,13 @@ input[type=range].seekbar {
     background: #343452;
     height: 5px;
     width: 10px;
-    border-radius: 50%;*/
-    box-shadow: -100vw 0 0 100vw #e7e4f2;
+    border-radius: 50%;
+    box-shadow: -100vw 0 0 100vw #e7e4f2;*/
     border: 1px solid red;
     border-radius: 50%;
     height: 10px;
     width: 10px;
+    z-index: 2;
   }
   input[type=range].seekbar:focus {
     outline: none;
