@@ -466,8 +466,10 @@ input:-webkit-autofill:active  {
 .main_seekbar 
 {
     position: relative;
-    display: block;
     width: 100%;
+    flex-grow: 1;
+    flex: 1;
+    display: flex;
 }
 
 
@@ -478,14 +480,15 @@ input:-webkit-autofill:active  {
 input[type=range].seekbar {
     -webkit-appearance: none !important;
     margin: 0px;
+    margin-left: 10px;
     padding: 0px;
     background: #292882;
     height: 5px;
-    width: 90%;
     outline: none;
     cursor: pointer;
     overflow: hidden;
     border-radius: 5px;
+    flex-grow: 1;
   }
 
  input[type=range].seekbar::-ms-track {
@@ -525,11 +528,11 @@ input[type=range].seekbar {
   .now_playing_container
   {
       width: 10%;
-      background-color: rgba(41, 38, 78, 0.08);
+      background-color: rgba(140, 138, 168, 0.08);
       border-radius: 3px;
       display: flex;
     align-self: stretch;
-    margin-top: -5px;
+    margin-top: -5px !important;
     margin-bottom: -5px;
     margin-left: -5px;
   }
