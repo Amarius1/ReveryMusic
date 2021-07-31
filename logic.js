@@ -114,6 +114,14 @@ $('a[action="#closedialog"]').click(function() {
                     document.querySelector('.song_title').textContent = data.title.replace(/\(OFFICIAL|MUSIC|VIDEO\)/g,'');
                 });
 
+                var rangeslider = document.getElementById("sliderRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = rangeslider.value;
+            
+                rangeslider.max = player.getDuration();
+                rangeslider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
            
         } 
         else if (playerStatus == 2) {
@@ -149,11 +157,4 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
-    var rangeslider = document.getElementById("sliderRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = rangeslider.value;
-
-    rangeslider.max = player.getDuration();
-    rangeslider.oninput = function() {
-      output.innerHTML = this.value;
-    }
+  
