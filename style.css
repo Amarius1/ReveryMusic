@@ -484,7 +484,7 @@ input[type=range].seekbar {
     -webkit-appearance: none !important;
     margin: 0px;
     padding: 0px;
-    background: #e7e4f2;
+    background: #292882;
     height: 5px;
     width: 100%;
     outline: none;
@@ -509,7 +509,7 @@ input[type=range].seekbar {
     width: 10px;
     border-radius: 50%;*/
     box-shadow: -100vw 0 0 100vw #e7e4f2;
-    border: 2px solid red;
+    border: 1px solid red;
     border-radius: 50%;
     height: 10px;
     width: 10px;
