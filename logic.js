@@ -122,7 +122,7 @@ $('a[action="#closedialog"]').click(function() {
                 //output.innerHTML = player.getCurrentTime();
                 rangeslider.value = player.getCurrentTime();
 
-                var s = Math.trunc(player.getDuration() - player.getCurrentTime());
+                var s = Math.trunc(player.getCurrentTime());
                 var minutes = Math.floor(s / 60);
                 var seconds = s - minutes * 60;
                 output.innerHTML = minutes + ':' + seconds;
