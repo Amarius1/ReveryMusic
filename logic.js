@@ -114,15 +114,21 @@ $('a[action="#closedialog"]').click(function() {
                     document.querySelector('.song_title').textContent = data.title.replace(/\(OFFICIAL|MUSIC|VIDEO\)/g,'');
                 });
 
+                function seekBar() {
                 var rangeslider = document.getElementById("sliderRange");
                 var output = document.getElementById("demo");
-                output.innerHTML = rangeslider.value;
-            
                 rangeslider.max = player.getDuration();
-                rangeslider.onchange = function() {
-                  output.innerHTML = player.getCurrentTime();
+               
+                output.innerHTML = player.getCurrentTime();
+                rangeslider.value = player.getCurrentTime();
+
+               
+                rangeslider.oninput = function() {
+                  player.seekTo(this.value);
                 }
-           
+                
+                };
+                setInterval(seekBar, 1000);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
