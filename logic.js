@@ -152,7 +152,8 @@ $('a[action="#closedialog"]').click(function() {
     var rangeslider = document.getElementById("sliderRange");
     var output = document.getElementById("demo");
     output.innerHTML = rangeslider.value;
-      
+
+    angeslider.max = player.getDuration();
     rangeslider.oninput = function() {
       output.innerHTML = this.value;
     }
