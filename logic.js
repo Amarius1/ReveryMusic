@@ -134,7 +134,7 @@ $('a[action="#closedialog"]').click(function() {
                   rangeslider.oninput = function() {
                     player.seekTo(this.value);
                   };
-                };
+                });
                 
                 };
                 setInterval(seekBar, 1000);
