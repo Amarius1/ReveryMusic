@@ -545,10 +545,13 @@ input[type=range].seekbar {
   }
   .thumbwrapper 
   {
-    
-    flex-grow: 1;
+
   }
   .infowrapper 
   {
-    flex-grow: 2;
+    flex-grow: 1;
+  }
+  .song_title 
+  {
+      margin: 0px;
   }
