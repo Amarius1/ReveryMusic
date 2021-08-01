@@ -416,6 +416,7 @@ input:-webkit-autofill:active  {
     color: white;
     width: 100%;
     border-radius: 0px;
+    height: 1em;
     
 }
 .now_playing [btn][icon]
@@ -531,9 +532,9 @@ input[type=range].seekbar {
       border-radius: 3px;
       display: flex;
     align-self: stretch;
-    margin-top: -5px !important;
-    margin-bottom: -5px;
-    margin-left: -5px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: -10px;
     overflow: hidden;
     align-items: stretch;
   }
@@ -541,7 +542,6 @@ input[type=range].seekbar {
   {
     height: 100%;
     width: fit-content;
-    border-radius: 5px;
   }
   .thumbwrapper 
   {
