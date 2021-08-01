@@ -182,3 +182,7 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
+    function repeat(func, times) {
+      func();
+      times && --times && repeat(func, times);
+  }
