@@ -143,6 +143,10 @@ $('a[action="#closedialog"]').click(function() {
                   };
                   current.innerHTML = minutes + ':' + seconds;
                   songLength.innerHTML = minutes_len + ':' + seconds_len;
+
+                  $("[play]").on("mousedown", function() {
+                    player.playVideo() 
+                  });
                 });
                 
                 };
@@ -151,6 +155,10 @@ $('a[action="#closedialog"]').click(function() {
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
             document.querySelector('[play_mini]').textContent = 'play_arrow';
+
+            $("[play]").on("mousedown", function() {
+              player.pauseVideo() 
+            });
            
         } 
         else if (playerStatus == 3) {
@@ -160,6 +168,7 @@ $('a[action="#closedialog"]').click(function() {
     function onPlayerStateChange(event) {
         changePlayIcon(event.data);
     }
+    /*
     function play() {
         player.playVideo() 
         $(this).one("click", pause); 
@@ -171,7 +180,7 @@ $('a[action="#closedialog"]').click(function() {
         
     }
     $("[play]").one("click", play);
-
+    */
      $("[play_mini]").one("click", play);
    
     $("[skip-next]").on("mousedown", function() {
