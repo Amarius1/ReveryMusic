@@ -183,6 +183,6 @@ $('a[action="#closedialog"]').click(function() {
     });
  
     var evt = new Event('dblclick');
-    var button = document.getElementByClass('playlist');
+    var button = document.querySelector('playlist');
     // This is where the magic happens
     button.dispatchEvent(evt);
