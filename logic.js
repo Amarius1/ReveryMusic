@@ -173,7 +173,7 @@ $('a[action="#closedialog"]').click(function() {
     $("[play]").one("mousedown", play);
 
    
-     $("[play_mini]").one("click", play);
+     $("[play_mini]").one("mousedown", play);
    
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
