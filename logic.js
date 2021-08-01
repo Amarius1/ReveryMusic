@@ -182,7 +182,3 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
-    var evt = new Event('dblclick');
-    var button = document.querySelector('playlist');
-    // This is where the magic happens
-    button.dispatchEvent(evt);
