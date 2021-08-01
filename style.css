@@ -536,7 +536,12 @@ input[type=range].seekbar {
     margin-bottom: -15px;
     margin-left: -15px;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     align-items: stretch;
+
+ 
   }
   .current_thumbnail 
   {
