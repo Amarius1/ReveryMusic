@@ -535,10 +535,20 @@ input[type=range].seekbar {
     margin-bottom: -5px;
     margin-left: -5px;
     overflow: hidden;
+    align-items: stretch;
   }
   .current_thumbnail 
   {
     height: 100%;
     width: fit-content;
     border-radius: 5px;
+  }
+  .thumbwrapper 
+  {
+    
+    flex-grow: 1;
+  }
+  .infowrapper 
+  {
+    flex-grow: 2;
   }
