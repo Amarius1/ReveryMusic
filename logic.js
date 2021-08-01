@@ -113,6 +113,9 @@ $('a[action="#closedialog"]').click(function() {
                     {format: 'json', url: url}, function (data) {
                     document.querySelector('.song_title').textContent = data.title.replace(/\(OFFICIAL|MUSIC|VIDEO\)/g,'');
                 });
+                var thumby = "https://i1.ytimg.com/vi/" + videoId + "/sddefault.jpg";
+             
+                document.querySelector('.current_thumbnail').setAttribute("src", thumby);
                 function sleep(ms) {
                   return new Promise(resolve => setTimeout(resolve, ms));
                 };
