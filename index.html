@@ -53,13 +53,13 @@
         <p>Curated playlists</p>
           <span card v-for="item in playlists.curated" :key="item" v-bind:class="item.color" class="playlist">
             <p>{{ item.title }}</p>
-            <a v-bind:onmousedown="'player.loadPlaylist({list:\''+item.list+'\', listType: \'playlist\'}); player.loadPlaylist({list:\''+item.list+'\', listType: \'playlist\'});'" btn icon>play_arrow</a>
+            <a v-bind:onmousedown="'player.loadPlaylist({list:\''+item.list+'\', listType: \'playlist\', index: 0, startSeconds: 0 ,suggestedQuality: \'small\''}); player.playVideo()'" btn icon>play_arrow</a>
           </span>
 
         <p>Recommended playlists</p>
           <span card v-for="item in playlists.recommended" :key="item" v-bind:class="item.color" class="playlist">
             <p>{{ item.title }}</p>
-            <a v-bind:onmousedown="'player.loadPlaylist({list:\''+item.list+'\', listType: \'playlist\'}); player.loadPlaylist({list:\''+item.list+'\', listType: \'playlist\'});'" btn icon>stream</a>
+            <a v-bind:onmousedown="'player.loadPlaylist({list:\''+item.list+'\', listType: \'playlist\'}); player.playVideo()'" btn icon>stream</a>
           </span>
        
       </div>
