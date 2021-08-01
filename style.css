@@ -527,14 +527,14 @@ input[type=range].seekbar {
   }
   .now_playing_container
   {
-      width: 10%;
+      width: 20%;
       background-color: rgba(140, 138, 168, 0.08);
       border-radius: 3px;
       display: flex;
     align-self: stretch;
-    margin-top: -13px;
-    margin-bottom: -13px;
-    margin-left: -13px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    margin-left: -15px;
     overflow: hidden;
     align-items: stretch;
   }
