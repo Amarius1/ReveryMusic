@@ -31,7 +31,7 @@ var app = new Vue({
             color: "red",
             description: "description",
             genre: "metal",
-            list: "PLRJWQz0eR2QVQigxE6xzfdoLmJzR7ZVrS",
+            list: "PLGFMsDB0B5xxoM4NvsnpcCVgyOytis74P",
           },
           {
             title: "Title2",
@@ -182,7 +182,7 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
-    function repeat(func, times) {
-      func();
-      times && --times && repeat(func, times);
-  }
+function repeat(func, times) {
+    func();
+    times && --times && repeat(func, times);
+}
