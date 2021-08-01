@@ -144,7 +144,7 @@ $('a[action="#closedialog"]').click(function() {
                   current.innerHTML = minutes + ':' + seconds;
                   songLength.innerHTML = minutes_len + ':' + seconds_len;
 
-                  $("[play]").on("mousedown", function() {
+                  document.querySelector('[play]').on("mousedown", function() {
                     player.playVideo() 
                   });
                 });
@@ -156,7 +156,7 @@ $('a[action="#closedialog"]').click(function() {
             document.querySelector('[play]').textContent = 'play_arrow';
             document.querySelector('[play_mini]').textContent = 'play_arrow';
 
-            $("[play]").on("mousedown", function() {
+            document.querySelector('[play]').on("mousedown", function() {
               player.pauseVideo() 
             });
            
@@ -181,7 +181,7 @@ $('a[action="#closedialog"]').click(function() {
     }
     $("[play]").one("click", play);
     */
-     $("[play_mini]").one("click", play);
+    // $("[play_mini]").one("click", play);
    
     $("[skip-next]").on("mousedown", function() {
         player.nextVideo();
