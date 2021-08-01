@@ -527,7 +527,7 @@ input[type=range].seekbar {
   }
   .now_playing_container
   {
-      width: 15%;
+      width: 10%;
       background-color: rgba(140, 138, 168, 0.08);
       border-radius: 3px;
       display: flex;
@@ -558,9 +558,10 @@ input[type=range].seekbar {
     flex-grow: 1;
     padding: 2px;
     display: flex;
-    justify-content: flex-start;
     align-content: center;
     align-items: center;
+    padding-left: 5px;
+    justify-content: center;
 
   }
   .song_title 
