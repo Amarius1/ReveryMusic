@@ -118,23 +118,28 @@ $('a[action="#closedialog"]').click(function() {
                 };
                 function seekBar() {
                 var rangeslider = document.getElementById("sliderRange");
-                var output = document.getElementById("demo");
+                var current = document.getElementById("current_time");
+                var songLength = document.getElementById("current_length");
                 rangeslider.max = player.getDuration();
                
-                //output.innerHTML = player.getCurrentTime();
                 rangeslider.value = player.getCurrentTime();
 
                
                 var s = Math.trunc(player.getCurrentTime());
                 var minutes = Math.floor(s / 60);
                 var seconds = s - minutes * 60;
+
+                var s_len = Math.trunc(player.getDuration());
+                var minutes_len = Math.floor(s_len / 60);
+                var seconds_len = s_len - minutes * 60;
                 
                
                 sleep(200).then(() => {
                   rangeslider.oninput = function() {
                     player.seekTo(this.value);
                   };
-                  output.innerHTML = minutes + ':' + seconds;
+                  current.innerHTML = minutes + ':' + seconds;
+                  songLength.innerHTML = minutes_len + ':' + seconds_len;
                 });
                 
                 };
