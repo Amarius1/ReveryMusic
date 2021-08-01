@@ -131,7 +131,7 @@ $('a[action="#closedialog"]').click(function() {
 
                 var s_len = Math.trunc(player.getDuration());
                 var minutes_len = Math.floor(s_len / 60);
-                var seconds_len = s_len - minutes * 60;
+                var seconds_len = s_len - minutes_len * 60;
                 
                
                 sleep(200).then(() => {
