@@ -550,8 +550,13 @@ input[type=range].seekbar {
   .infowrapper 
   {
     flex-grow: 1;
+    padding: 2px;
+    justify-content: center;
+  align-content: center;
+  align-items: stretch;
   }
   .song_title 
   {
       margin: 0px;
+      align-items: center;  
   }
