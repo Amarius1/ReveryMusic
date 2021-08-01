@@ -105,6 +105,10 @@ $('a[action="#closedialog"]').click(function() {
             $( ".line-1" ).addClass( "hidden" );
             $( ".now_playing" ).removeClass( "hidden" );
             
+            document.querySelector('[play]').on("mousedown", function() {
+              player.playVideo() 
+            });
+
             var url = player.getVideoUrl();
                 var match = url.match(/[?&]v=([^&]+)/);
                 videoId = match[1];
@@ -144,9 +148,6 @@ $('a[action="#closedialog"]').click(function() {
                   current.innerHTML = minutes + ':' + seconds;
                   songLength.innerHTML = minutes_len + ':' + seconds_len;
 
-                  document.querySelector('[play]').on("mousedown", function() {
-                    player.playVideo() 
-                  });
                 });
                 
                 };
