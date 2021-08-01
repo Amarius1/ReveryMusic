@@ -527,8 +527,8 @@ input[type=range].seekbar {
   }
   .now_playing_container
   {
-      width: 10%;
-      background-color: rgba(140, 138, 168, 0.08);
+      width: 15%;
+      background-color: transparent;
       border-radius: 3px;
       display: flex;
     align-self: stretch;
@@ -548,6 +548,7 @@ input[type=range].seekbar {
     width: 4.1em;
     object-fit: cover;
     height: 4.1em;
+    border-radius: 5px;
   }
   .thumbwrapper 
   {
