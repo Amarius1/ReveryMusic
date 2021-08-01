@@ -532,9 +532,9 @@ input[type=range].seekbar {
       border-radius: 3px;
       display: flex;
     align-self: stretch;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    margin-left: -10px;
+    margin-top: -13px;
+    margin-bottom: -13px;
+    margin-left: -13px;
     overflow: hidden;
     align-items: stretch;
   }
