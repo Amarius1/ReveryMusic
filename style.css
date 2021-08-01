@@ -547,7 +547,7 @@ input[type=range].seekbar {
   {
     height: 100%;
     width: fit-content;
-    object-fit: cover;
+    clip-path: inset(0 20% 0 20%);
   }
   .thumbwrapper 
   {
