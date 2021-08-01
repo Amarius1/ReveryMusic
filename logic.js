@@ -93,7 +93,7 @@ $('a[action="#closedialog"]').click(function() {
         });
       }
       function onPlayerReady(event) {
-        event.target.playVideo();
+       
       }
       function changePlayIcon(playerStatus) {
         if (playerStatus == -1) {
