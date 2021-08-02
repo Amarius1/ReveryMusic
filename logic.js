@@ -57,11 +57,6 @@ var app = new Vue({
          return searchPlaylists(this.playlists, this.searchQuery);
         }
     },
-    methods: {
-      playlistPlay: setTimeout(function () {
-        player.loadPlaylist({list: "PLGFMsDB0B5xxoM4NvsnpcCVgyOytis74P"});
-      },100)
-    }
   });
 
 
