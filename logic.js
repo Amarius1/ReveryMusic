@@ -55,7 +55,10 @@ var app = new Vue({
     computed: {
       resultQuery() {
          return searchPlaylists(this.playlists, this.searchQuery);
-        }
+        },
+        myFunctionXX() {
+          player.loadPlaylist({list:+'\''+this.playlists.curated.item+'\''})
+        },
     },
   });
 
@@ -181,7 +184,7 @@ $('a[action="#closedialog"]').click(function() {
     $("[skip-prev]").on("mousedown", function() {
         player.previousVideo();
     });
-    $(".activatrix").on("click", function() {
-      $(".activatrix").click();
-      alert("clicked");
-    });
+    //$(".activatrix").on("click", function() {
+    //  $(".activatrix").click();
+    //  alert("clicked");
+    //});
