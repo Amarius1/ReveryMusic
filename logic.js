@@ -183,4 +183,4 @@ $('a[action="#closedialog"]').click(function() {
     });
     $(".activatrix").on("mousedown", function() {
       $(".activatrix").click();
-    }
+    });
