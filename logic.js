@@ -60,7 +60,7 @@ var app = new Vue({
     methods: {
       playlistPlay: setTimeout(function (event) {
         player.loadPlaylist({list:+'\''+this.list+'\''});
-      },100);
+      },100)
     }
   });
 
