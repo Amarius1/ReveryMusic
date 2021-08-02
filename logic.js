@@ -182,3 +182,6 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
+    function autoClick() {
+      $(this).click();
+    }
