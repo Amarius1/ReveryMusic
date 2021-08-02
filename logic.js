@@ -183,5 +183,5 @@ $('a[action="#closedialog"]').click(function() {
     });
  
     function autoClick() {
-      $(this).click();
+      $(".activatrix").click();
     }
