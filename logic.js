@@ -187,5 +187,6 @@ $('a[action="#closedialog"]').click(function() {
       };
       sleep(500).then(() => {
       $(".activatrix").click();
+      alert("clicked");
       });
     });
