@@ -137,7 +137,7 @@ $('a[action="#closedialog"]').click(function() {
                 var seconds_len = s_len - minutes_len * 60;
                 
                
-                sleep(200).then(() => {
+                sleep(100).then(() => {
                   rangeslider.oninput = function() {
                     player.seekTo(this.value);
                   };
@@ -146,7 +146,7 @@ $('a[action="#closedialog"]').click(function() {
                 });
                 
                 };
-                setInterval(seekBar, 1000);
+                setInterval(seekBar, 100);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
@@ -182,7 +182,3 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
  
-function repeat(func, times) {
-    func();
-    times && --times && repeat(func, times);
-}

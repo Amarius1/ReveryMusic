@@ -32,7 +32,7 @@
       <span id="current_length"></span>
     </span>
     <a btn class="library" action="#dialog">Music</a>
-    <canvas id="output" height="500" width="500"></canvas>
+   
   </section>
   <span dialog id="dialog" class="full-screen music_library">
     <aside id="app">
@@ -72,23 +72,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="framework.js"></script>
 <script type="text/javascript" src="logic.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
-<script>
-   let wave = new Wave();
-
-   navigator.mediaDevices.getUserMedia({
-         audio: true
-      })
-      .then(function (stream) {
-         wave.fromStream(stream, "output", {
-            type: "shine",
-            colors: ["red", "white", "blue"]
-         });
-      })
-      .catch(function (err) {
-         console.log(err.message)
-      });
-</script>
 
 </body>
 </html>
