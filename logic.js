@@ -56,7 +56,12 @@ var app = new Vue({
       resultQuery() {
          return searchPlaylists(this.playlists, this.searchQuery);
         }
-      },
+    },
+    methods: {
+      playlistPlay: function (event) {
+        player.loadPlaylist({list:+'\''+item.list+'\''});
+      }
+    }
   });
 
 
