@@ -137,7 +137,7 @@ $('a[action="#closedialog"]').click(function() {
                 var seconds_len = s_len - minutes_len * 60;
                 
                
-                sleep(100).then(() => {
+                sleep(0).then(() => {
                   rangeslider.oninput = function() {
                     player.seekTo(this.value);
                   };
@@ -146,7 +146,7 @@ $('a[action="#closedialog"]').click(function() {
                 });
                 
                 };
-                setInterval(seekBar, 100);
+                setInterval(seekBar, 0);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
