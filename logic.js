@@ -60,7 +60,7 @@ var app = new Vue({
     },
     method: {
       myFunctionXX() {
-        player.loadPlaylist({list:+'\''+this.playlists.curated.item+'\''})
+        player.loadPlaylist({list:+this.playlists.curated.item})
       }
     }
   });
