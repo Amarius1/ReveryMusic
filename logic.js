@@ -59,7 +59,7 @@ var app = new Vue({
     },
     methods: {
       playlistPlay: function (event) {
-        player.loadPlaylist({list:+'\''+item.list+'\''});
+        player.loadPlaylist({list:+'\''+this.list+'\''});
       }
     }
   });
