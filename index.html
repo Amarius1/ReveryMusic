@@ -45,7 +45,7 @@
           <span v-for="resultArray in resultQuery">
             <span card v-for="item in resultArray" :key="item" v-bind:class="item.color" class="playlist search_result slide-in-top">
               <p>{{ item.title }}</p>
-              <a v-on:click="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
+              <a @click="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
             </span>
           </span>
       </div>
@@ -54,13 +54,13 @@
         <p>Curated playlists</p>
           <span card v-for="item in playlists.curated" :key="item" v-bind:class="item.color" class="playlist">
             <p>{{ item.title }}</p>
-            <a v-on:click="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
+            <a @click="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>play_arrow</a>
           </span>
 
         <p>Recommended playlists</p>
           <span card v-for="item in playlists.recommended" :key="item" v-bind:class="item.color" class="playlist">
             <p>{{ item.title }}</p>
-            <a v-on:click="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>stream</a>
+            <a @click="'player.loadPlaylist({list:\''+item.list+'\'})'" btn icon>stream</a>
           </span>
        
       </div>
