@@ -56,10 +56,13 @@ var app = new Vue({
       resultQuery() {
          return searchPlaylists(this.playlists, this.searchQuery);
         },
-        myFunctionXX() {
-          player.loadPlaylist({list:+'\''+this.playlists.curated.item+'\''})
-        },
+        
     },
+    method: {
+      myFunctionXX() {
+        player.loadPlaylist({list:+'\''+this.playlists.curated.item+'\''})
+      }
+    }
   });
 
 
