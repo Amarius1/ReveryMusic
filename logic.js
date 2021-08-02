@@ -181,6 +181,6 @@ $('a[action="#closedialog"]').click(function() {
     $("[skip-prev]").on("mousedown", function() {
         player.previousVideo();
     });
-    $(".activatrix").on("mousedown", function() {
+    $(".activatrix").on("click", function() {
       $(".activatrix").click();
     });
