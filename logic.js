@@ -130,7 +130,7 @@ $('a[action="#closedialog"]').click(function() {
                
                 var s = Math.trunc(player.getCurrentTime());
                 var minutes = Math.floor(s / 60);
-                var seconds = s - minutes * 60 + 1;
+                var seconds = s - minutes * 60;
 
                 var s_len = Math.trunc(player.getDuration());
                 var minutes_len = Math.floor(s_len / 60);
@@ -146,7 +146,7 @@ $('a[action="#closedialog"]').click(function() {
                 });
                 
                 };
-                setInterval(seekBar, 0);
+                setInterval(seekBar, 1000);
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
