@@ -182,5 +182,10 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
     $(".activatrix").on("click", function() {
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      };
+      sleep(500).then(() => {
       $(".activatrix").click();
+      });
     });
