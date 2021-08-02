@@ -58,7 +58,7 @@ var app = new Vue({
         }
     },
     methods: {
-      playlistPlay: setTimeout(function (event) {
+      playlistPlay: setTimeout(function () {
         player.loadPlaylist({list:+'\''+this.list+'\''});
       },100)
     }
