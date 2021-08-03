@@ -24,6 +24,16 @@
       <div class="playlist_section slide-in-top">
         
         <p>Curated playlists</p>
+
+        <span card class="playlist">
+          <p>Music Title 1</p>
+          <a onmousedown="player.loadPlaylist({list: 'PLGFMsDB0B5xxoM4NvsnpcCVgyOytis74P'})" btn icon>stream</a>
+        </span>
+        <span card class="playlist">
+          <p>Music Title 2</p>
+          <a onmousedown="player.loadPlaylist({list: 'PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq'})" btn icon>stream</a>
+        </span>
+
           <span card v-for="item in playlists.curated" :key="item" v-bind:class="item.color" class="playlist">
             <p>{{ item.title }}</p>
             <a v-bind:onmousedown="'player.loadPlaylist({list:\''+item.list+'\'})'" class="activatrix" btn icon>play_arrow</a>
