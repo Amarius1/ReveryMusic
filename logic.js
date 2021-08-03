@@ -84,7 +84,7 @@ $('a[action="#closedialog"]').click(function() {
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           playerVars: {
-            'playsinline': 1
+            
           },
           events: {
             'onReady': onPlayerReady,
