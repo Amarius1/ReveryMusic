@@ -101,9 +101,56 @@ $('a[action="#closedialog"]').click(function() {
         }
         else if (playerStatus == 1) {
             document.querySelector('[play]').textContent = 'pause';
+            document.querySelector('[play_mini]').textContent = 'pause';
+         
+            
+            var url = player.getVideoUrl();
+                var match = url.match(/[?&]v=([^&]+)/);
+                videoId = match[1];
+
+                $.getJSON('https://noembed.com/embed',
+                    {format: 'json', url: url}, function (data) {
+                    document.querySelector('.song_title').textContent = data.title.replace(/\(OFFICIAL|MUSIC|VIDEO\)/g,'');
+                });
+                var thumby = "https://i1.ytimg.com/vi/" + videoId + "/mqdefault.jpg";
+             
+                document.querySelector('.current_thumbnail').setAttribute("src", thumby);
+                function sleep(ms) {
+                  return new Promise(resolve => setTimeout(resolve, ms));
+                };
+                function seekBar() {
+                var rangeslider = document.getElementById("sliderRange");
+                var current = document.getElementById("current_time");
+                var songLength = document.getElementById("current_length");
+                rangeslider.max = player.getDuration();
+               
+                rangeslider.value = player.getCurrentTime();
+
+               
+                var s = Math.trunc(player.getCurrentTime());
+                var minutes = Math.floor(s / 60);
+                var seconds = s - minutes * 60;
+
+                var s_len = Math.trunc(player.getDuration());
+                var minutes_len = Math.floor(s_len / 60);
+                var seconds_len = s_len - minutes_len * 60;
+                
+               
+                sleep(0).then(() => {
+                  rangeslider.oninput = function() {
+                    player.seekTo(this.value);
+                  };
+                  current.innerHTML = minutes + ':' + seconds;
+                  songLength.innerHTML = minutes_len + ':' + seconds_len;
+                });
+                
+                };
+                setInterval(seekBar, 1000);
         } 
         else if (playerStatus == 2) {
-            document.querySelector('[play]').textContent = 'play_arrow';     
+            document.querySelector('[play]').textContent = 'play_arrow';
+            document.querySelector('[play_mini]').textContent = 'play_arrow';
+           
         } 
         else if (playerStatus == 3) {
             document.querySelector('[play]').textContent = 'hourglass_empty';
