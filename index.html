@@ -12,6 +12,10 @@
     <span>
     <H1 class="line-1">REVERY</H1>
     </span>
+
+    </span>
+    
+
     <span id="now_playing" class="now_playing hidden">
       <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
       <div class="now_playing_container">
@@ -30,6 +34,13 @@
           <input type="range" min="0" max="100" value="0" class="seekbar" id="sliderRange">
       </div>
       <span id="current_length"></span>
+      <span dropdown class="custom from-bottom volume"> 
+        <a btn icon class="activator">volume_up</a>
+        <ul>
+          <input type="range" min="0" max="100" value="100" class="seekbar" id="volumeRange">
+        </ul>
+    </span>
+     
     </span>
     <a btn class="library" action="#dialog">Music</a>
     <a btn class="library" href="testingsite.html">Testing</a>

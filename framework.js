@@ -158,8 +158,8 @@ $(document).on("mousedown", function(event) {
 
 
 // drop down menu script
-$("[dropdown]").on("click", ".activator", function() {
-    $('[dropdown]').removeClass('open');
+$("[dropdown]:not(.custom)").on("click", ".activator", function() {
+    $('[dropdown]:not(.custom)').removeClass('open');
     $(this).parent().toggleClass('open');
 
 });

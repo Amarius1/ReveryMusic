@@ -84,7 +84,7 @@ $('a[action="#closedialog"]').click(function() {
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           playerVars: {
-            
+            'playsinline': 1
           },
           events: {
             'onReady': onPlayerReady,
@@ -170,6 +170,9 @@ $('a[action="#closedialog"]').click(function() {
         $(this).one("click", play);
         
     }
+    document.getElementById("volumeRange").oninput = function() {
+      player.setVolume(this.value);
+    };
     $("[play]").one("mousedown", play);
 
    
@@ -181,7 +184,16 @@ $('a[action="#closedialog"]').click(function() {
     $("[skip-prev]").on("mousedown", function() {
         player.previousVideo();
     });
-    //$(".activatrix").on("click", function() {
-    //  $(".activatrix").click();
-    //  alert("clicked");
-    //});
+
+
+    $("[dropdown].custom").on("mouseover", ".activator", function() {
+      $('[dropdown].custom').removeClass('open');
+      $(this).parent().toggleClass('open');
+  });
+  $(document).on("mouseout", function(event) {
+    var $trigger = $("[dropdown].custom");
+    if ($trigger !== event.target && !$trigger.has(event.target).length) {
+        $("[dropdown].custom").removeClass("open");
+
+    }
+});

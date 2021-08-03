@@ -571,3 +571,37 @@ input[type=range].seekbar {
       margin: 0px;
       align-items: center;  
   }
+  .sidebuttons 
+  {
+      background-color: white;
+  
+  }
+  [dropdown].volume.open ul 
+  {
+      background-color: rgb(52, 52, 65) !important;
+      height: 11em;
+      width: 2.5em;
+      right: 0.3em !important;
+      bottom: 0em !important;
+      position: absolute;
+      margin-bottom: 3em !important;
+      transition: all 0.1s !important;
+  }
+  [dropdown].volume ul 
+  {
+    background-color: rgba(36, 36, 44, 1) !important;
+    right: 0.3em !important;
+    bottom: 0em !important;
+    position: absolute;
+    margin-bottom: 3em !important;
+    transition: all 0s !important;
+  }
+  .volume .seekbar
+  {
+
+    transform:rotate(270deg);
+    position: absolute;
+    bottom: 5.6em;
+    right: -4.225em;
+    background: #777777 !important;
+  }
