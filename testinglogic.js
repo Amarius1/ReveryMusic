@@ -1,25 +1,3 @@
-const searchByTitleOrGenre = (item, search) =>
-  search
-  .toLowerCase()
-  .split(' ')
-  .every(v => item.title.toLowerCase().includes(v) || item.genre.toLowerCase().includes(v));
-
-const searchPlaylists = (playlists, search) => {
-  const searchResults = [];
-
-  if (search) {
-    for (const [playlistName, playlistItems] of Object.entries(playlists)) {
-      // Search for the item that matches the search by the single playlist title
-      const matchingPlaylistItems = playlistItems.filter(item => searchByTitleOrGenre(item, search));
-      // Set the first matching playlist as the search result
-      if (matchingPlaylistItems.length !== 0) {
-        searchResults.push(matchingPlaylistItems);
-      }
-    }
-  }
-  return searchResults;
-};
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -52,24 +30,7 @@ var app = new Vue({
         ],
       },
     },
-    computed: {
-      resultQuery() {
-         return searchPlaylists(this.playlists, this.searchQuery);
-        }
-    },
   });
-
-
-$('a[action="#dialog"]').click(function() {
-  $('#dialog').addClass('open')
-  $('body').addClass('remove-scrollbar')
-})
-$('a[action="#closedialog"]').click(function() {
-  $('#dialog').removeClass('open')
-  $('body').removeClass('remove-scrollbar')
-
-})
-
 
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -105,7 +66,7 @@ $('a[action="#closedialog"]').click(function() {
         } 
         else if (playerStatus == 2) {
             document.querySelector('[play]').textContent = 'play_arrow';
-            document.querySelector('[play_mini]').textContent = 'play_arrow';
+   
            
         } 
         else if (playerStatus == 3) {
@@ -136,7 +97,3 @@ $('a[action="#closedialog"]').click(function() {
     $("[skip-prev]").on("mousedown", function() {
         player.previousVideo();
     });
-    //$(".activatrix").on("click", function() {
-    //  $(".activatrix").click();
-    //  alert("clicked");
-    //});
