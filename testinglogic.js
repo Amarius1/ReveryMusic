@@ -1,36 +1,4 @@
-var app = new Vue({
-    el: '#app',
-    data: {
-      searchQuery: null,
-      playlists: {
-        curated: [
-          {
-            title: "Metal Essentials",
-            color: "red",
-            description: "description",
-            genre: "metal",
-            list: "PLGFMsDB0B5xxoM4NvsnpcCVgyOytis74P",
-          },
-          {
-            title: "Title2",
-            color: "blue",
-            description: "description",
-            genre: "rock",
-            list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
-          },
-        ],
-        recommended: [
-          {
-            title: "Title 3",
-            color: "blue",
-            description: "description",
-            genre: "indie",
-            list: "PLGFMsDB0B5xyqR0LgYHa79ZsWDxBSE_Kq",
-          },
-        ],
-      },
-    },
-  });
+
 
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
