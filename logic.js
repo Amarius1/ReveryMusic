@@ -185,7 +185,21 @@ $('a[action="#closedialog"]').click(function() {
         player.previousVideo();
     });
 
+    function mute() {
+      player.mute() 
+      $(this).one("click", unmute);
+      document.querySelector('[mute]').textContent = 'volume_off';
+      
+     
+  }
+  function unmute() {
+      player.unMute() 
+      $(this).one("click", mute);
+      document.querySelector('[mute]').textContent = 'volume_up';
+  }
+  $("[mute]").one("click", mute);
 
+  
     $("[dropdown].custom").on("mouseover", ".activator", function() {
       $('[dropdown].custom').removeClass('open');
       $(this).parent().toggleClass('open');

@@ -605,3 +605,8 @@ input[type=range].seekbar {
     right: -4.225em;
     background: #777777 !important;
   }
+  [mute]
+  {
+    margin-left: 0.5em !important;
+    background-color: rgba(255,255,255,0.1);
+  }
