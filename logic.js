@@ -55,14 +55,8 @@ var app = new Vue({
     computed: {
       resultQuery() {
          return searchPlaylists(this.playlists, this.searchQuery);
-        },
-        
+        }
     },
-    method: {
-      myFunctionXX() {
-        player.loadPlaylist({list:+this.playlists.curated.item})
-      }
-    }
   });
 
 

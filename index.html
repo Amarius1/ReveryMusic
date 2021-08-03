@@ -54,7 +54,7 @@
         <p>Curated playlists</p>
           <span card v-for="item in playlists.curated" :key="item" v-bind:class="item.color" class="playlist">
             <p>{{ item.title }}</p>
-            <a @click="myFunctionXX()" class="activatrix" btn icon>play_arrow</a>
+            <a v-bind:onmousedown="'player.loadPlaylist({list:\''+item.list+'\'})'" class="activatrix" btn icon>play_arrow</a>
           </span>
 
         <p>Recommended playlists</p>
